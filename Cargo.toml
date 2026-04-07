@@ -12,7 +12,7 @@ repository = "https://github.com/rust-embedded/volatile-register"
 version = "0.2.2"
 
 [dependencies]
-vcell = "0.1.0"
+vcell = { git = "https://github.com/Sonair-AS/vcell.git", branch = "certified_subset" }
 
 [package.metadata.docs.rs]
 targets = [
