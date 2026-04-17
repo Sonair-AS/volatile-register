@@ -1,4 +1,5 @@
 [package]
+edition = "2021"
 authors = [
 	"Jorge Aparicio <japaricious@gmail.com>",
 	"Jonathan 'theJPster' Pallant <github@thejpster.org.uk>"
