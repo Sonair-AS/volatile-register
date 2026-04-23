@@ -63,7 +63,8 @@ impl<T> RW<T>
 {
     /// Performs a read-modify-write operation
     ///
-    /// NOTE: `unsafe` because writes to a register are side effectful
+    /// # Safety
+    /// Writes to a register are side effectful
     #[inline(always)]
     pub unsafe fn modify<F>(&self, f: F)
         where F: FnOnce(T) -> T
@@ -79,7 +80,8 @@ impl<T> RW<T>
 
     /// Writes a `value` into the register
     ///
-    /// NOTE: `unsafe` because writes to a register are side effectful
+    /// # Safety
+    /// Writes to a register are side effectful
     #[inline(always)]
     pub unsafe fn write(&self, value: T) {
         self.register.set(value)
@@ -99,7 +101,8 @@ impl<T> WO<T>
 {
     /// Writes `value` into the register
     ///
-    /// NOTE: `unsafe` because writes to a register are side effectful
+    /// # Safety
+    /// Writes to a register are side effectful
     #[inline(always)]
     pub unsafe fn write(&self, value: T) {
         self.register.set(value)
